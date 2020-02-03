@@ -1,3 +1,10 @@
+/*
+    phones = 0 - 600px
+    tab-port = 600px - 900px;
+    tab-land = 900px -1200px;
+    1200px - 1800px = Normal styling applies
+    big-desk = 1800px
+*/
 *, *::after, *::before {
   padding: 0;
   margin: 0;
@@ -5,6 +12,15 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 57.5%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 70%; } }
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -17,6 +33,13 @@ body {
   position: relative;
   display: flex; }
 
+/*
+    phones = 0 - 600px
+    tab-port = 600px - 900px;
+    tab-land = 900px -1200px;
+    1200px - 1800px = Normal styling applies
+    big-desk = 1800px
+*/
 .sidebar {
   background-color: white;
   position: fixed;
@@ -35,6 +58,12 @@ body {
     margin: 0 auto; }
   .sidebar.active {
     width: 25%; }
+    @media (max-width: 75em) {
+      .sidebar.active {
+        width: 35%; } }
+    @media (max-width: 37.5em) {
+      .sidebar.active {
+        width: 45%; } }
   .sidebar.active .sidebar__close {
     opacity: 1;
     visibility: visible;
@@ -63,11 +92,24 @@ body {
     .sidebar__list--item:not(:last-child) {
       margin: 1rem 0; }
 
+/*
+    phones = 0 - 600px
+    tab-port = 600px - 900px;
+    tab-land = 900px -1200px;
+    1200px - 1800px = Normal styling applies
+    big-desk = 1800px
+*/
 .main {
   width: 100%;
   transition: all .5s ease; }
   .main.active {
     width: 75%; }
+    @media (max-width: 75em) {
+      .main.active {
+        width: 100%; } }
+    @media (max-width: 37.5em) {
+      .main.active {
+        width: 100%; } }
 
 .navbar {
   width: 100%;
@@ -114,6 +156,13 @@ body {
     .navbar__menu:hover .navbar__menu--icons::before {
       transform: translateY(0.1rem); }
 
+/*
+    phones = 0 - 600px
+    tab-port = 600px - 900px;
+    tab-land = 900px -1200px;
+    1200px - 1800px = Normal styling applies
+    big-desk = 1800px
+*/
 @keyframes rotate {
   0% {
     transform: rotate(0deg); }
@@ -161,6 +210,13 @@ body {
   justify-content: flex-start;
   align-items: center;
   align-content: center; }
+  @media (max-width: 75em) {
+    .row {
+      width: 80%;
+      justify-content: space-around; } }
+  @media (max-width: 37.5em) {
+    .row {
+      width: 70%; } }
   .row.active {
     justify-content: space-around; }
 
@@ -187,6 +243,13 @@ body {
   .notification__message {
     font-size: 1.5rem; }
 
+/*
+    phones = 0 - 600px
+    tab-port = 600px - 900px;
+    tab-land = 900px -1200px;
+    1200px - 1800px = Normal styling applies
+    big-desk = 1800px
+*/
 .product {
   height: 30rem;
   width: 25rem;
@@ -196,6 +259,12 @@ body {
   box-shadow: 0 0.1rem 5rem rgba(0, 0, 0, 0.1);
   font-family: 'Montserrat', sans-serif;
   cursor: pointer; }
+  @media (max-width: 75em) {
+    .product {
+      width: 28rem; } }
+  @media (max-width: 37.5em) {
+    .product {
+      width: 27.5rem; } }
   .product.active {
     width: 27.5rem; }
   .product__icon {
@@ -224,6 +293,13 @@ body {
   .product__date {
     text-align: center; }
 
+/*
+    phones = 0 - 600px
+    tab-port = 600px - 900px;
+    tab-land = 900px -1200px;
+    1200px - 1800px = Normal styling applies
+    big-desk = 1800px
+*/
 @keyframes rotate {
   0% {
     transform: rotate(0deg); }
@@ -241,6 +317,11 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); }
+  @media (max-width: 56.25em) {
+    .preloader {
+      top: 45%;
+      left: 45%;
+      transform: translate(-50%, -50%); } }
 
 
 /*# sourceMappingURL=/app.581aa3f0.css.map */

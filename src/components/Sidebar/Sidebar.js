@@ -19,8 +19,7 @@ const Sidebar = ({status, toggleSidebar, sortBy})=>{
                 </ul>
             </div>
             <div className="sidebar__heading">
-                <h2 className="sidebar__title">from our sponsors</h2>
-                <img className="ad" src={`http://localhost:3000/ads/?r=${Math.floor(Math.random()*1000)}`}/>
+                <h2 className="sidebar__title">built with&nbsp;<span>♥️</span>&nbsp;&nbsp;by ThePseudoMind</h2>
             </div>
         </div>
     );

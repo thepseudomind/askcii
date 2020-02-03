@@ -31876,10 +31876,7 @@ var Sidebar = function Sidebar(_ref) {
     className: "sidebar__heading"
   }, _react.default.createElement("h2", {
     className: "sidebar__title"
-  }, "from our sponsors"), _react.default.createElement("img", {
-    className: "ad",
-    src: "http://localhost:3000/ads/?r=".concat(Math.floor(Math.random() * 1000))
-  })));
+  }, "built with\xA0", _react.default.createElement("span", null, "\u2665\uFE0F"), "\xA0\xA0by ThePseudoMind")));
 };
 
 var _default = Sidebar;
@@ -32349,7 +32346,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49153" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49522" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

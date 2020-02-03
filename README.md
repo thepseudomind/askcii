@@ -40,6 +40,8 @@ FAQ
 
 Start with `npm start`. The server will look for any files you add to the `public/` directory.
 
+Also run from your command line `npm run dev`. It'll launch the ASKCII web app at port 1234.
+
 ### What libraries/frameworks, packages, tools can I use?
 
 You need to use React.js as the main js library and Git for version control, but other than that you are free to work with any package of your choice with two exceptions - you should not use any package/plugin for the *loading of products on scroll* and *formatting of dates*. We want to see how you solve problems by writing your own JS code, so using any package/plugin for the above two features will immediately make us reject your submission.
