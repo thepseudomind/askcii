@@ -1,0 +1,69 @@
+let faces = [], sortedFaces = [], sortedProducts = [];
+        products.forEach((v, i)=> {
+            faces.push(v.id);
+        });
+        sortedFaces = faces.sort();
+        sortedFaces.forEach((v,i) => {
+            products.forEach((u,i)=>{
+                if(v === u.id){
+                    sortedProducts.push(u);
+                }
+            });
+        });
+        console.log(sortedProducts);
+
+        (category === 'asc') ? setProducts(sortInAscendingOrder(data)) :
+
+        if(category === 'asc'){
+            console.log('Nothing');
+        }else{
+            fetch(linkToFetch)
+            .then(
+                res => res.json()
+            ).then(
+                data => (category === 'asc') ? setProducts(sortInAscendingOrder(data)) : setProducts(data)
+            );
+            console.log(fetchedProducts.length);
+        }
+
+
+   // Products to render
+   useEffect(()=>{
+        let productsCollected = [];
+        fetchedProducts.forEach((v, i)=>{
+            if(i >= 0 && i < 12){
+                productsCollected.push(v);
+            }
+        });
+        increaseCount(currentProductsLoaded + 12);
+        addToRender(productsCollected);
+   }, [fetchedProducts]);
+
+   const fakeFetch = ()=>{
+        let productsCollected = [];
+        let nextStop = currentProductsLoaded + 12;
+        fetchedProducts.forEach((v, i)=>{
+            if(i >= currentProductsLoaded && i < nextStop){
+                productsCollected.push(v);
+            }
+        });
+        increaseCount(nextStop);
+        addToRender([...productsToRender, ...productsCollected]);
+   }
+
+   increaseCount(currentProductsLoaded + 12);
+        addToRender(productsCollected);
+
+        const [productsToRender, addToRender] = useState([]);
+
+    const addToProducts = (start)=>{
+        let productsCollected = [];
+        fetchedProducts.forEach((v, i)=>{
+            if(i >= start && i < start + 12){
+                productsCollected.push(v);
+            }
+        });
+        addToRender([...productsToRender, ...productsCollected]);
+        console.log(productsToRender);
+        
+   } 

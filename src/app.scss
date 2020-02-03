@@ -1,0 +1,15 @@
+*, *::after, *::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Bebas Neue', cursive;
+    box-sizing: border-box;
+}

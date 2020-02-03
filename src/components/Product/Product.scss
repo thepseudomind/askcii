@@ -1,0 +1,51 @@
+.product{
+    height: 30rem;
+    width: 25rem;
+    margin: 2rem;
+    border-radius: .2rem;
+    overflow: hidden;
+    box-shadow: 0 .1rem 5rem rgba(black, .1);
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+
+    &.active{
+        width: 27.5rem;
+    }
+
+    &__icon{
+        height: 50%;
+        color: white;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__content{
+        height: 50%;
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+        font-weight: 400;
+        text-transform: uppercase;
+
+        & > *{
+            &:not(:last-child){
+                margin-bottom: .5rem;
+            }
+        }
+    }
+
+    &__price{
+        font-family: 'Bebas Neue', cursive;
+        font-size: 5rem;
+    }
+
+    &__date{
+        text-align: center;
+    }
+}
