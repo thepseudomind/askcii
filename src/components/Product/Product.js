@@ -2,6 +2,7 @@ import React from 'react';
 import './Product.scss';
 
 const Product =({status, face, size, date, price})=>{
+    // Set string for date to be displayed 
     const dateToDisplay = (fetchedDate)=>{
         const dateDifference = Math.abs(new Date() - new Date(fetchedDate));
         const dateInDays = Math.floor(dateDifference / (1000 * 60 * 60 * 24))
@@ -16,6 +17,7 @@ const Product =({status, face, size, date, price})=>{
         }
     }
 
+    // Price to be shown in $
     const formatPrice = (price)=>{
         return `$${(price/100).toFixed(2)}`;
     }

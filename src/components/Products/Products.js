@@ -28,7 +28,7 @@ const Products = ({status, category})=>{
             break;
     
         default:
-            linkToFetch = 'http://localhost:3000/products?_limit=60';
+            linkToFetch = 'http://localhost:3000/products';
             break;
     }
 
@@ -90,12 +90,12 @@ const Products = ({status, category})=>{
             if(productsToRender.length !== fetchedProducts.length){
                 loadingStatus(true);
                 setTimeout(()=>{
-                    console.log('At the bottom');
+                     // console.log('At the bottom');
                     loadingStatus(false);
                     (productsToRender.length === fetchedProducts.length) ? console.log('Nothing to add') : addToProducts(productsToRender.length);
-                }, 3000);
+                }, 2000);
             }else{
-                console.log('End of catalogue');
+                // console.log('End of catalogue');
                 document.querySelector('.products').insertAdjacentHTML('beforeend', '<div class="notification"><p class="notification__message">end of catalogue</p></div>');
                 setTimeout(()=>{
                     document.querySelector('.notification').parentNode.removeChild(document.querySelector('.notification'));
@@ -104,7 +104,7 @@ const Products = ({status, category})=>{
         }
    }
    
-
+   // Add to the products to be rendered
    const addToProducts = (start)=>{
         let productsCollected = [];
         fetchedProducts.forEach((v, i)=>{
@@ -113,8 +113,6 @@ const Products = ({status, category})=>{
             }
         });
         addToRender([...productsToRender, ...productsCollected]);
-        console.log(productsToRender);
-        
    } 
    
    // Render preloader upon page load (no products) or fetched Product list when available

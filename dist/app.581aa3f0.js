@@ -31956,6 +31956,7 @@ var Product = function Product(_ref) {
       date = _ref.date,
       price = _ref.price;
 
+  // Set string for date to be displayed 
   var dateToDisplay = function dateToDisplay(fetchedDate) {
     var dateDifference = Math.abs(new Date() - new Date(fetchedDate));
     var dateInDays = Math.floor(dateDifference / (1000 * 60 * 60 * 24));
@@ -31970,7 +31971,8 @@ var Product = function Product(_ref) {
     } else {
       return new Date(fetchedDate).toDateString();
     }
-  };
+  }; // Price to be shown in $
+
 
   var formatPrice = function formatPrice(price) {
     return "$".concat((price / 100).toFixed(2));
@@ -32099,7 +32101,7 @@ var Products = function Products(_ref) {
       break;
 
     default:
-      linkToFetch = 'http://localhost:3000/products?_limit=60';
+      linkToFetch = 'http://localhost:3000/products';
       break;
   } // Clear fetched products on category change and set new ones upon fetch
 
@@ -32158,19 +32160,20 @@ var Products = function Products(_ref) {
       if (productsToRender.length !== fetchedProducts.length) {
         loadingStatus(true);
         setTimeout(function () {
-          console.log('At the bottom');
+          // console.log('At the bottom');
           loadingStatus(false);
           productsToRender.length === fetchedProducts.length ? console.log('Nothing to add') : addToProducts(productsToRender.length);
-        }, 3000);
+        }, 2000);
       } else {
-        console.log('End of catalogue');
+        // console.log('End of catalogue');
         document.querySelector('.products').insertAdjacentHTML('beforeend', '<div class="notification"><p class="notification__message">end of catalogue</p></div>');
         setTimeout(function () {
           document.querySelector('.notification').parentNode.removeChild(document.querySelector('.notification'));
         }, 2000);
       }
     }
-  };
+  }; // Add to the products to be rendered
+
 
   var addToProducts = function addToProducts(start) {
     var productsCollected = [];
@@ -32180,7 +32183,6 @@ var Products = function Products(_ref) {
       }
     });
     addToRender([].concat(_toConsumableArray(productsToRender), productsCollected));
-    console.log(productsToRender);
   }; // Render preloader upon page load (no products) or fetched Product list when available
 
 
@@ -32346,7 +32348,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49522" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63551" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
